@@ -26,7 +26,7 @@ pi = 4 * num_point_circle / num_point_total  # pi value=points in a circle(when 
 print("--- %s seconds to calculate value of \u03C0 ---" % round((time.time() - start_time), 4))
 print(f'--- calculated value of \u03C0 is {pi} ---')
 
-# making dataframes for plotting:
+# making dataframes for plotting (it could not be the best way):
 points = {'x': xx, 'y': yy, 'distance': dd}
 df = pd.DataFrame(points)
 in_c = df.loc[df['distance'] == 'in a circle']
