@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 num_point_circle = 0
 num_point_total = 0
 xx, yy, dd = [], [], []
-start_time = time.time()  # also we start counting time how long the program compiles
+start_time = time.time()  # we start counting time how long the program compiles
 n = int(input('how many dots: '))
-for a in range(n):
+for a in range(n):  # getting random coordinates and calculating distance from (0;0)
     x = random.uniform(-1, 1)
     y = random.uniform(-1, 1)
     distance = abs(x)**2 + abs(y)**2
@@ -22,7 +22,7 @@ for a in range(n):
     if distance <= 1:
         num_point_circle += 1
     num_point_total += 1
-pi = 4 * num_point_circle / num_point_total
+pi = 4 * num_point_circle / num_point_total  # pi value=points in a circle(when distance < 1) divided by total points.
 print("--- %s seconds to calculate value of \u03C0 ---" % round((time.time() - start_time), 4))
 print(f'--- calculated value of \u03C0 is {pi} ---')
 
